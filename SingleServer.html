@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>设备详细信息</title>
+		
+		<link rel="stylesheet" type="text/css"
+			href="CSS/Monitor_AllNetMatrix/SingleServer.css">
+		<link href="CSS/default.css" rel="stylesheet" type="text/css" />
+
+		<link href="JS/jquery/themes/default/easyui.css" rel="stylesheet"
+			type="text/css" />
+		<link href="JS/jquery/themes/icon.css" rel="stylesheet"
+			type="text/css" />
+		<link rel="stylesheet" type="text/css" href="JS/jquery/themes/default/easyui.css"/>
+		<link rel="stylesheet" type="text/css" href="JS/jquery/themes/icon.css"/>
+		<script type="text/javascript" src="JS/jquery/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="JS/jquery/jquery.easyui.min.js"></script>
+		<script language="JavaScript"
+			src="JS/FusionChartsFree/js/FusionCharts.js"></script>
+		<script language="JavaScript"
+			src="JS/FusionWidgets/JSClass/FusionCharts.js"></script>
+		<script type="text/javascript"
+			src="JS/Common/DatePicker/WdatePicker.js"></script>
+		<script type="text/javascript" src="JS/Common/Date.js"></script>
+		<script type="text/javascript" src="JS/Common/commonFun.js"></script>
+		<script type="text/javascript" src="JS/Common/Cookies.js"></script>
+		<script type="text/javascript" src="JS/Common/Time.js"></script>
+		<script type="text/javascript"
+			src="JS/Monitor_AllNetMatrix/SingleServer.js"></script>
+			<style> 
+	    .MzTreeViewRow {border:none;padding:0px;margin:0px;border-collapse:collapse;}
+	    .trRow{height:25px;}
+	    .MzTreeViewCell0 {border-bottom:1px solid #CCCCCC;border-left:1px solid #CCCCCC;border-right:1px solid #CCCCCC;border-top:1px solid #CCCCCC;width:50px;padding:0px;margin:0px; text-align:center}
+	    .MzTreeViewCell1 {border-bottom:1px solid #CCCCCC;border-left:1px solid #CCCCCC;border-right:1px solid #CCCCCC;border-top:1px solid #CCCCCC;width:100px;padding:0px;margin:0px; text-align:center}
+	    .MzTreeViewCell2 {border-bottom:1px solid #CCCCCC;border-left:1px solid #CCCCCC;border-right:1px solid #CCCCCC;padding:0px;margin:0px; text-align:center; }
+	    .MzTreeViewCell5 {border-bottom:1px solid #CCCCCC;border-left:1px solid #CCCCCC;width:430px;padding:0px;margin:0px; text-align:center; }
+	    .MzTreeViewCell3 {border-bottom:1px solid #CCCCCC;border-left:1px solid #CCCCCC;width:430px;padding:5px;margin:5px; text-align:left; }
+	    .MzTreeViewCell4 {border-bottom:1px solid #CCCCCC;border-left:1px solid #CCCCCC;border-right:1px solid #CCCCCC;width:150px;padding:0px;margin:0px; text-align:center}
+	    .MzTreeViewCell6 {border-bottom:1px solid #CCCCCC;border-left:1px solid #CCCCCC;border-right:1px solid #CCCCCC;border-top:1px solid #CCCCCC;width:100px;padding:0px;margin:0px; text-align:right}
+    </style> 
+		<script type="text/javascript">
+	$(function() {
+	var equipid = getValueOfURLParamter('equipid');
+	var userid = getValueOfURLParamter('userid');
+	document.getElementById("serverid").src="abstract!MonitorSingleServer.action?equipid="+equipid+"&userid="+userid;
+	//	$('#ttt').load('abstract!MonitorSingleServer.action', function() {
+			
+	//		//InitSingleServer('S2010081909115112821803115001202');
+	//			InitSingleServer(equipid);
+	//		});
+	});
+</script>
+	</head>
+
+	<body style="margin: 0 auto; text-align: center;padding-top:0px;overflow:hidden">
+	<iframe id="serverid" width="100%" height="98%" src="" scrolling="no"></iframe>
+	</body>
+</html>

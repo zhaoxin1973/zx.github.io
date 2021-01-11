@@ -1,0 +1,72 @@
+<!--
+  $Id: stylesheet.html,v 1.1 2011/05/23 08:20:04 hwli Exp $
+  Copyright (c) 2006-2009, JGraph Ltd
+  
+  Stylesheet example for mxGraph. This example demonstrates using
+  a custom stylesheet and control points in edges, as well as
+  overriding the getLabel and getTooltip function to return
+  dynamic information, and making a supercall in JavaScript.
+-->
+<html>
+<head>
+	<title>Stylesheet example for mxGraph</title>
+
+	<!-- Sets the basepath for the library if not in same directory -->
+	<script type="text/javascript">
+		mxBasePath = './';
+	</script>
+
+	<!-- Loads and initiaizes the library -->
+	<script type="text/javascript" src="JS/mxGraph/js/mxclient_ff.js"></script>
+
+	<!-- Example code -->
+	<script type="text/javascript">
+		var graph;
+		// Program starts here. Creates a sample graph in the
+		// DOM node with the specified ID. This function is invoked
+		// from the onLoad event handler of the document (see below).
+		function main(container)
+		{
+			// Creates the graph inside the given container
+			graph = new mxGraph(container);
+
+			// Uncomment the following if you want the container
+			// to fit the size of the graph
+			//graph.setResizeContainer(true);
+			
+			// Enables rubberband selection
+			new mxRubberband(graph);
+			
+
+							
+			setTimeout(draw(), 20);
+		};
+
+		function draw(){
+			var parent = graph.getDefaultParent();
+			graph.getModel().beginUpdate();
+			try{
+				var v1 = graph.insertVertex(parent, null, 'Hello,', 20, 20, 80, 30);
+				var v2 = graph.insertVertex(parent, null, 'World!', 200, 150, 80, 30);
+				var e1 = graph.insertEdge(parent, null, '', v1, v2);
+				v1.setValue("123");
+			}
+			finally
+			{
+				// Updates the display
+				graph.getModel().endUpdate();
+			}
+		}
+	</script>
+</head>
+
+<!-- Page passes the container for the graph to the grogram -->
+<body onload="main(document.getElementById('graphContainer'))">
+ 
+	<!-- Creates a container for the graph with a grid wallpaper -->
+	<div id="graphContainer"
+		style="overflow:hidden;width:621px;height:311px">
+	</div>
+	<input type='button' id='btnOk' value="画图" onclick='draw()'> 
+</body>
+</html>

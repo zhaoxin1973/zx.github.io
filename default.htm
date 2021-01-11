@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript"> 
+function Open(url) {
+if (screen.width <= 800) {
+   document.location = url;
+}
+else if (screen.width > 800){
+   ouvrir(url, "Roc", screen.width-9, screen.height-24-28);
+}
+function ouvrir(loc, name, width, height) {
+   var isIE = false;
+   var isNS = false;
+   if (document.all) isIE = true;
+   else if (document.layers) isNS = true;
+   var bVer = parseInt(navigator.appVersion);
+   var newWin=null;
+        var _params = "width="+width+",height="+height+",location=no,resizable=no,status=no,scrollbars=no,fullscreen=yes,location=no";
+        _left = 0;
+        _top = 0;
+        if (isIE) _params += ",top=" + _top + ",left=" + _left;
+        else if (isNS) _params += ",screenX=" + _left + ",screenY=" + _top;
+   else _params += ",top=" + _top + ",left=" + _left;
+        newWin = window.open(loc, name, _params);
+        if ((newWin!=null) && !(isIE && (bVer<5))) newWin.focus();
+}
+}
+</script> 
+</head>
+<body onload="Open('login.jsp')" >
+</body>
+</html>

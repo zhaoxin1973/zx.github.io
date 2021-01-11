@@ -1,0 +1,78 @@
+<html>
+	<head>
+		<title>System_Review.htm</title>
+		<link rel="stylesheet" type="text/css"
+			href="CSS/System_Review/System_Review.css">
+		<link href="CSS/default.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="JS/jquery/jquery-1.4.2.min.js"></script>
+
+		<link href="JS/jquery/themes/default/easyui.css" rel="stylesheet"
+			type="text/css" />
+		<link href="JS/jquery/themes/icon.css" rel="stylesheet"
+			type="text/css" />
+		<script type="text/javascript" src="JS/jquery/jquery.easyui.min.js"></script>
+		<script type="text/javascript" src="JS/Common/Cookies.js"></script>
+		<script type="text/javascript" src="JS/System_Review/System_Review.js"></script>
+		<link href="CSS/treeTable/jquery.treeTable.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="JS/jquery/jquery.treeTable.min.js"></script>
+		<script type="text/javascript">
+	$(document).ready(function() {
+		InitSystemReview();
+		//$('#System_Review_DetailWindow').window('open');
+	});
+</script>
+
+	</head>
+
+	<body style="margin: 0 auto; text-align: center;">
+		<div id="ttt"
+			style="margin: 0 auto; text-align: left; width: 1000px; position: relative;">
+			<div id="System_Review_title">
+					节点、单位概览
+			</div>
+			<hr />
+			<table id="System_Review_table" cellspacing="0" cellpadding="0">
+				<thead>
+					<tr>						
+						<th>
+							节点、单位树
+						</th>						
+						<th>
+							资源网段
+						</th>
+						<th>
+							用户数量
+						</th>
+						<th>
+							路由器
+						</th>
+						<th>
+							交换机
+						</th>
+						<th>
+							防火墙
+						</th>
+						<th>
+							服务器
+						</th>
+						<th>
+							一般终端
+						</th>
+						<th>
+							电报终端
+						</th>
+						<th>
+							未知设备
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+			<div id="System_Review_DetailWindow" class="easyui-window"
+			closed="true" modal="true" title="详细信息" minimizable="false" maximizable="false"
+			style="width: 1000px; height: 580px;text-align:left;"><iframe frameborder="0" src="" width="985px" height="540px"></iframe></div>
+		</div>
+		
+	</body>
+</html>
